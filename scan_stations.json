@@ -1,0 +1,266 @@
+[
+  {
+    "id": 1,
+    "name": "bridge- S01",
+    "guid": "{6b44c293_31d5_4271_b0e7_5b46c49dd4cb}",
+    "pointCount": 0,
+    "surveyPosition": {
+      "x": -79.6366007075991,
+      "y": 131.615930833721,
+      "z": -0.0454033044111681
+    },
+    "groundZ": -1.665,
+    "rotation": [
+      0.9254738245975597,
+      0.0005392185232485181,
+      0.00034552668710756217,
+      0.37881102127506494
+    ],
+    "title": "Scan Station 01",
+    "description": "Survey Setup S01. Coordinates: X=-79.64, Y=131.62, Z=-0.05m",
+    "hasPanorama": true,
+    "photo": "photos/bridge- S01.jpg",
+    "photoHd": "photos_hd/bridge- S01.jpg",
+    "thumbnail": "thumbnails/bridge- S01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "bridge- S02",
+    "guid": "{b55f2939_95c9_4be3_9624_c7c2e10df28c}",
+    "pointCount": 0,
+    "surveyPosition": {
+      "x": -92.9000675120899,
+      "y": 142.726969665298,
+      "z": -0.0894007901680185
+    },
+    "groundZ": -1.709,
+    "rotation": [
+      0.629320472501486,
+      -0.00023118718680850968,
+      0.00010338144591660242,
+      0.7771458542353987
+    ],
+    "title": "Scan Station 02",
+    "description": "Survey Setup S02. Coordinates: X=-92.90, Y=142.73, Z=-0.09m",
+    "hasPanorama": true,
+    "photo": "photos/bridge- S02.jpg",
+    "photoHd": "photos_hd/bridge- S02.jpg",
+    "thumbnail": "thumbnails/bridge- S02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "bridge- S03",
+    "guid": "{d8c99bb6_3e86_4b8f_a9b5_240383d8769e}",
+    "pointCount": 0,
+    "surveyPosition": {
+      "x": -101.755253532715,
+      "y": 151.430228232112,
+      "z": -0.101546643582356
+    },
+    "groundZ": -1.678,
+    "rotation": [
+      0.6278747447667884,
+      -0.0002853550373455404,
+      0.00010367872445745744,
+      0.7783143405509532
+    ],
+    "title": "Scan Station 03",
+    "description": "Survey Setup S03. Coordinates: X=-101.76, Y=151.43, Z=-0.10m",
+    "hasPanorama": true,
+    "photo": "photos/bridge- S03.jpg",
+    "photoHd": "photos_hd/bridge- S03.jpg",
+    "thumbnail": "thumbnails/bridge- S03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "bridge- S04",
+    "guid": "{e4ace665_221d_4bac_bfd7_28e845817596}",
+    "pointCount": 0,
+    "surveyPosition": {
+      "x": -90.6997596058547,
+      "y": 158.366698527893,
+      "z": 0.519139320806296
+    },
+    "groundZ": -0.748,
+    "rotation": [
+      0.7838773790242174,
+      -1.5824028980363166e-05,
+      0.00029841946148240266,
+      0.6209155863316274
+    ],
+    "title": "Scan Station 04",
+    "description": "Survey Setup S04. Coordinates: X=-90.70, Y=158.37, Z=0.52m",
+    "hasPanorama": true,
+    "photo": "photos/bridge- S04.jpg",
+    "photoHd": "photos_hd/bridge- S04.jpg",
+    "thumbnail": "thumbnails/bridge- S04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "bridge- S05",
+    "guid": "{4e3ee06c_7591_4da6_90a4_474bce8c741d}",
+    "pointCount": 0,
+    "surveyPosition": {
+      "x": -78.9077999087092,
+      "y": 164.745639420041,
+      "z": 1.44471786944868
+    },
+    "groundZ": -0.057,
+    "rotation": [
+      0.7765726026501703,
+      2.6069277281013465e-05,
+      0.0002400699251566519,
+      0.6300277251835545
+    ],
+    "title": "Scan Station 05",
+    "description": "Survey Setup S05. Coordinates: X=-78.91, Y=164.75, Z=1.44m",
+    "hasPanorama": true,
+    "photo": "photos/bridge- S05.jpg",
+    "photoHd": "photos_hd/bridge- S05.jpg",
+    "thumbnail": "thumbnails/bridge- S05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "bridge- S06",
+    "guid": "{4c762884_92e4_4068_93a1_e0d9b1e72f2b}",
+    "pointCount": 0,
+    "surveyPosition": {
+      "x": -67.509619145379,
+      "y": 171.24768647707,
+      "z": 2.43239489554214
+    },
+    "groundZ": 0.936,
+    "rotation": [
+      0.7684457443020208,
+      -8.28645221609389e-05,
+      0.0003389503464686688,
+      0.6399148508280197
+    ],
+    "title": "Scan Station 06",
+    "description": "Survey Setup S06. Coordinates: X=-67.51, Y=171.25, Z=2.43m",
+    "hasPanorama": true,
+    "photo": "photos/bridge- S06.jpg",
+    "photoHd": "photos_hd/bridge- S06.jpg",
+    "thumbnail": "thumbnails/bridge- S06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "bridge- S07",
+    "guid": "{147336af_8ae2_4e41_be6a_05f80a223313}",
+    "pointCount": 0,
+    "surveyPosition": {
+      "x": -55.6318272305661,
+      "y": 177.913692088363,
+      "z": 3.46457992564051
+    },
+    "groundZ": 1.869,
+    "rotation": [
+      0.7479221378873793,
+      -0.00010761921195744636,
+      0.0002255015679087242,
+      0.6637864213925443
+    ],
+    "title": "Scan Station 07",
+    "description": "Survey Setup S07. Coordinates: X=-55.63, Y=177.91, Z=3.46m",
+    "hasPanorama": true,
+    "photo": "photos/bridge- S07.jpg",
+    "photoHd": "photos_hd/bridge- S07.jpg",
+    "thumbnail": "thumbnails/bridge- S07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "bridge- S08",
+    "guid": "{9fb5c869_cb70_4a68_808e_bfd3e19d6f64}",
+    "pointCount": 0,
+    "surveyPosition": {
+      "x": -41.9892596538928,
+      "y": 185.454707436629,
+      "z": 4.58572052739297
+    },
+    "groundZ": 2.896,
+    "rotation": [
+      0.7563173579345484,
+      -0.00011510208393297667,
+      0.0002243668524246587,
+      0.6542048536184443
+    ],
+    "title": "Scan Station 08",
+    "description": "Survey Setup S08. Coordinates: X=-41.99, Y=185.45, Z=4.59m",
+    "hasPanorama": true,
+    "photo": "photos/bridge- S08.jpg",
+    "photoHd": "photos_hd/bridge- S08.jpg",
+    "thumbnail": "thumbnails/bridge- S08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "bridge- S09",
+    "guid": "{388d28ee_1bad_48cb_87e0_f7aedb2c7746}",
+    "pointCount": 0,
+    "surveyPosition": {
+      "x": -31.4361745294473,
+      "y": 191.674345102869,
+      "z": 5.11201329636758
+    },
+    "groundZ": 3.568,
+    "rotation": [
+      0.7868665654405217,
+      -3.104217172420565e-05,
+      0.00016969232728450545,
+      0.6171231468943091
+    ],
+    "title": "Scan Station 09",
+    "description": "Survey Setup S09. Coordinates: X=-31.44, Y=191.67, Z=5.11m",
+    "hasPanorama": true,
+    "photo": "photos/bridge- S09.jpg",
+    "photoHd": "photos_hd/bridge- S09.jpg",
+    "thumbnail": "thumbnails/bridge- S09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "bridge- S10",
+    "guid": "{b0da0d4a_219e_4083_8f9a_0c3fa45bf7e8}",
+    "pointCount": 0,
+    "surveyPosition": {
+      "x": -61.0092644389219,
+      "y": 196.173026816917,
+      "z": -0.504641620609369
+    },
+    "groundZ": -2.125,
+    "rotation": [
+      0.3123020967979424,
+      -0.0007772053201103708,
+      1.8752423464630707e-05,
+      0.9499825240160188
+    ],
+    "title": "Scan Station 10",
+    "description": "Survey Setup S10. Coordinates: X=-61.01, Y=196.17, Z=-0.50m",
+    "hasPanorama": true,
+    "photo": "photos/bridge- S10.jpg",
+    "photoHd": "photos_hd/bridge- S10.jpg",
+    "thumbnail": "thumbnails/bridge- S10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "bridge- S11",
+    "guid": "{b331e506_ba80_4ddf_94fb_6fcf76f5c541}",
+    "pointCount": 0,
+    "surveyPosition": {
+      "x": -36.11959179706,
+      "y": 178.225741294839,
+      "z": -0.338913272296029
+    },
+    "groundZ": -1.959,
+    "rotation": [
+      -0.8101298162634223,
+      -0.0015496351591230226,
+      -0.0005550688299459131,
+      0.5862482164838214
+    ],
+    "title": "Scan Station 11",
+    "description": "Survey Setup S11. Coordinates: X=-36.12, Y=178.23, Z=-0.34m",
+    "hasPanorama": true,
+    "photo": "photos/bridge- S11.jpg",
+    "photoHd": "photos_hd/bridge- S11.jpg",
+    "thumbnail": "thumbnails/bridge- S11.jpg"
+  }
+]
