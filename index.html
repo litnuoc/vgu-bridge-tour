@@ -772,6 +772,7 @@
       dollhouseMesh: null,
       dollhousePointCloud: null,
       photosphereMesh: null,
+      panoVSpan: Math.PI * 2 * 1048 / 2560, // updated automatically from the first loaded panorama
       nextPhotosphereMesh: null,
       inImagePucksGroup: new THREE.Group(),
       dollhouseBeaconsGroup: new THREE.Group(),
@@ -846,10 +847,11 @@
         // Standard Three.js SphereGeometry puts u=0 at +X, causing the panorama to be inverted by 180°.
         // We apply sphereGeo.rotateZ(Math.PI) to orient the panorama 100% correctly with survey coordinates!
         // ========================================================
-        const sphereGeo = new THREE.SphereGeometry(150, 64, 32);
-        sphereGeo.rotateX(Math.PI / 2); // Align equator with horizontal XY plane when Z is UP
-        sphereGeo.scale(-1, 1, 1); // Invert sphere to view from inside
-        sphereGeo.rotateZ(Math.PI); // Rotate 180° around Z: aligns E57 center with Forward (+X)!
+        // PANORAMA VERTICAL COVERAGE FIX: E57 panoramas are not 2:1 (e.g. 2560x1048). They span from the
+        // zenith (+90deg) down to ~-57deg; the area under the tripod is not imaged. Mapping such an image over
+        // the full 180deg stretched it and pushed the photo downwards relative to the 3D floor markers.
+        // The sphere now covers only the real vertical span (thetaLength = PI * 2 * h / w), auto-set from the texture.
+        const sphereGeo = buildPanoSphereGeo(state.panoVSpan);
 
         const sphereMat = new THREE.MeshBasicMaterial({
           transparent: true,
@@ -1203,7 +1205,7 @@
 
           // Floating 3D Waypoint Badge above the floor disc (ensures instant visibility even from far away)
           const waypointSprite = createWalkWaypointSprite(`S${String(st.id).padStart(2, '0')}`);
-          waypointSprite.position.set(0, 0, 1.25);
+          waypointSprite.position.set(0, 0, 0.6);
           waypointSprite.renderOrder = 105;
           waypointSprite.userData = { isNavPuck: true, stationIndex: idx, stationData: st };
           navPuck.add(waypointSprite);
@@ -1215,7 +1217,7 @@
             depthWrite: false
           });
           const hitMesh = new THREE.Mesh(hitGeo, hitMat);
-          hitMesh.position.set(0, 0, 1.2);
+          hitMesh.position.set(0, 0, 0.6);
           hitMesh.userData = {
             isNavPuck: true,
             stationIndex: idx,
@@ -1500,6 +1502,27 @@
       }
     }
 
+    // Photosphere geometry covering only the panorama's real vertical span (top = zenith)
+    function buildPanoSphereGeo(vSpan) {
+      const g = new THREE.SphereGeometry(150, 64, 32, 0, Math.PI * 2, 0, vSpan);
+      g.rotateX(Math.PI / 2); // Align equator with horizontal XY plane when Z is UP
+      g.scale(-1, 1, 1); // Invert sphere to view from inside
+      g.rotateZ(Math.PI); // Rotate 180° around Z: aligns E57 center with Forward (+X)!
+      return g;
+    }
+    function applyPanoAspect(w, h) {
+      if (!w || !h) return;
+      const span = Math.min(Math.PI, Math.PI * 2 * h / w);
+      if (Math.abs(span - state.panoVSpan) < 1e-4) return;
+      state.panoVSpan = span;
+      if (!state.photosphereMesh) return;
+      const old = state.photosphereMesh.geometry;
+      const g = buildPanoSphereGeo(span);
+      state.photosphereMesh.geometry = g;
+      if (state.nextPhotosphereMesh) state.nextPhotosphereMesh.geometry = g;
+      old.dispose();
+    }
+
     // Texture Loader with Cache
     const textureLoader = new THREE.TextureLoader();
     function getOrLoadTexture(url) {
@@ -1510,6 +1533,7 @@
         }
         textureLoader.load(url, (tex) => {
           tex.colorSpace = THREE.SRGBColorSpace;
+          if (tex.image) applyPanoAspect(tex.image.width, tex.image.height);
           tex.generateMipmaps = true;
           tex.minFilter = THREE.LinearMipmapLinearFilter;
           state.textureCache.set(url, tex);
@@ -1717,7 +1741,7 @@
           const worldPos = new THREE.Vector3();
           puck.getWorldPosition(worldPos);
 
-          for (const zOff of [0.15, 1.25]) {
+          for (const zOff of [0.15, 0.6]) {
             const testPos = worldPos.clone();
             testPos.z += zOff;
 
@@ -2109,7 +2133,7 @@
           puck.userData.decalMesh.scale.set(pulse, pulse, 1);
         }
         if (puck.userData.waypointSprite) {
-          puck.userData.waypointSprite.position.z = 1.25 + Math.sin(time * 0.0035 + puck.userData.stationIndex) * 0.07;
+          puck.userData.waypointSprite.position.z = 0.6 + Math.sin(time * 0.0035 + puck.userData.stationIndex) * 0.07;
         }
       });
 
